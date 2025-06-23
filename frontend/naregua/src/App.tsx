@@ -1,20 +1,19 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import ClientesPage from './pages/Clientes'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
+import HomePage from './pages/HomePage'
+import ClientesPage from './pages/ClientesPage'
 
-export default function App() {
+function App() {
   return (
     <BrowserRouter>
-      <nav className="bg-blue-600 p-4 text-white">
-        <Link to="/" className="mr-4 font-bold">NaRegua</Link>
-        <Link to="/clientes" className="hover:underline">Clientes</Link>
-      </nav>
-
-      <div className="min-h-screen bg-gray-100 p-4">
+      <Layout>
         <Routes>
-          <Route path="/" element={<h1>Bem-vindo ao NaRegua!</h1>} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/clientes" element={<ClientesPage />} />
         </Routes>
-      </div>
+      </Layout>
     </BrowserRouter>
   )
 }
+
+export default App
