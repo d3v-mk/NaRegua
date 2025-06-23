@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+.DS_Store
+
+# Virtualenv
+venv/
+.env
+
+# Banco local
+*.db
+
+# Logs
+*.log
+
+# Editor/IDE
+.vscode/
+.idea/
+
+# Pytest cache
+.pytest_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
