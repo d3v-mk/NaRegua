@@ -2,14 +2,14 @@ from pydantic_settings import BaseSettings
 from functools import lru_cache
 
 class Settings(BaseSettings):
-    APP_NAME: str = "GestorFlex"
+    APP_NAME: str
     DEBUG: bool = True
 
     # Banco de dados
-    DB_URL: str = "sqlite:///./organix.db"
+    DB_URL: str
 
     # Token JWT (exemplo pra quando for usar auth)
-    SECRET_KEY: str = "muka_top_segredo"
+    SECRET_KEY: str
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
