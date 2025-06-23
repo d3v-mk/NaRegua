@@ -20,6 +20,10 @@ def atualizar_cliente_db(db: Session, cliente_id: int, dados: ClienteUpdate):
     if cliente:
         if dados.nome is not None:
             cliente.nome = dados.nome
+        if dados.email is not None:
+            cliente.email = dados.email
+        if dados.telefone is not None:
+            cliente.telefone = dados.telefone
         db.commit()
         db.refresh(cliente)
     return cliente
